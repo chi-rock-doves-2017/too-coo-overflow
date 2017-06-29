@@ -1,0 +1,19 @@
+<nav class="nav-bar-home">
+  <ol class="nav-bar-home-list">
+  <!-- this is the logo img -->
+   <!--  <li><img src="assests/logo"></li> -->
+    <li><a href="/">Home</a></li>
+  </ol>
+</nav>
+
+<nav class="nav-bar-user-functions">
+  <ol class="nav-bar-user-functions-list">
+  <% if logged_in? %>
+   <li><a href="/questions/new">Ask a Question</a></li>
+   <li><a class="logout" href="/sessions">Logout</a></li>
+  <% else %>
+    <li><a href="/sessions/new">Login</a></li>
+    <li><a href="/users/new">Sign Up</a></li>
+  <% end %>
+  </ol>
+</nav>
