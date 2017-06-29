@@ -1,5 +1,6 @@
 # Too Coo Overflow
 Stack Overflow Clone. A place to ask questions and get answers.
+
 Team Members: Rachel Kerner, Saham Khozestani, Matt Mayerle, and Josh Harvey
 
 ## Norms
