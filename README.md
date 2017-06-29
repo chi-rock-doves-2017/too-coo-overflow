@@ -1,7 +1,8 @@
 # Too Coo Overflow
 Stack Overflow Clone. A place to ask questions and get answers.
 
-Team Members: Rachel Kerner, Saham Khozestani, Matt Mayerle, and Josh Harvey
+#### Team Members: 
+   Rachel Kerner, Saham Khozestani, Matt Mayerle, and Josh Harvey
 
 ## Norms
 #### Team norms for Too Coo Overflow dev team!
