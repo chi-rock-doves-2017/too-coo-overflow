@@ -2,7 +2,7 @@
 Stack Overflow Clone. A place to ask questions and get answers.
 Team Members: Rachel Kerner, Saham Khozestani, Matt Mayerle, and Josh Harvey
 
-##Norms
+## Norms
 Team norms for Too Coo Overflow dev team!
   * D.B.S.
   * Regular communication
@@ -14,7 +14,7 @@ Team norms for Too Coo Overflow dev team!
   * **Voice Confusions**
   * Ask other groups for help
 
-##User Stories
+## User Stories
 MVP requirements:
 
   1. AAU I can ask questions in a post
@@ -29,9 +29,9 @@ MVP requirements:
 Stretches:
 
   1. Sort answers by rating on a question
-    - Best answer is first, then most highly voted
+     - Best answer is first, then most highly voted
   2. Sort comments by oldest first
   3. Users can see questions sorted in 3 ways
-    - Highest voted
-    - Most recent
-    - Trending (Most viewed in a given amount of time)
+     - Highest voted
+     - Most recent
+     - Trending (Most viewed in a given amount of time)
