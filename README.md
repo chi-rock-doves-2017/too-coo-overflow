@@ -3,7 +3,7 @@ Stack Overflow Clone. A place to ask questions and get answers.
 Team Members: Rachel Kerner, Saham Khozestani, Matt Mayerle, and Josh Harvey
 
 ## Norms
-Team norms for Too Coo Overflow dev team!
+#### Team norms for Too Coo Overflow dev team!
   * D.B.S.
   * Regular communication
   * Hourly and/or feature complete Check ins
@@ -15,7 +15,7 @@ Team norms for Too Coo Overflow dev team!
   * Ask other groups for help
 
 ## User Stories
-MVP requirements:
+#### MVP requirements:
 
   1. AAU I can ask questions in a post
   2. AAU I can answer user questions
@@ -26,7 +26,7 @@ MVP requirements:
   7. A User must be logged in to Vote, ask a question, give an answer, and make a comment
   8. Guests can view all questions, answers and comments
 
-Stretches:
+#### Stretches:
 
   1. Sort answers by rating on a question
      - Best answer is first, then most highly voted
