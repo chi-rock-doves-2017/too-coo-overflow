@@ -1,7 +1,8 @@
 helpers do
   def vote_count(votable)
     unless votable.votes.empty?
-      return votable.votes.reduce(:+)
+      p votes_value = votable.votes.map { |vote| vote.value }
+      return votes_value.reduce(:+)
     else
       return 0
     end

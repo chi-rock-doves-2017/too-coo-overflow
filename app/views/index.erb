@@ -9,7 +9,7 @@
 <div class="post-container">
   <!-- this is the partial to display all the questions  -->
   <% @questions.each  do |question| %>
-  <%= erb :'_questions', layout: false, locals: { question: question } %>
+  <%= erb :'_question_title', layout: false, locals: { question: question } %>
   <% end %>
 </div>
 
