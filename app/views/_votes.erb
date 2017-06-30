@@ -4,6 +4,8 @@
   <input type="submit" name="updoot">
 </form>
 
+<span id="vote_count"><%= vote_count(votable) %></span>
+
 <form class="vote downvote" action="/votes" method="POST">
   <input type="hidden" name="voteable" value="<%= voteable %>">
   <input type="hidden" name="vote" value="-1">
