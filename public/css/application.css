@@ -1,0 +1,7 @@
+.container {
+	margin: auto;
+	box-sizing: border-box;
+	width: 50%;
+	border: 2px dashed gray;
+	padding: 25px;
+}
