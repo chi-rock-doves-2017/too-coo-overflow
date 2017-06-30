@@ -1,4 +1,4 @@
-class User < ActiveRecord::Base
+class User < ApplicationRecord
 	validates :name, presence: true
 	validates :email, presence: true
 	validates :password_hash, presence: true
@@ -7,6 +7,10 @@ class User < ActiveRecord::Base
 	has_many :comments, foreign_key: :commenter_id
 	has_many :votes, foreign_key: :voter_id
 	has_many :answers
+
+  def authenticate(password)
+    self.password == password
+  end
 
 	include BCrypt
 
