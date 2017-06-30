@@ -1,30 +1,29 @@
 <div class="questions-show-container">
   <div class="votes-container">
-    <%= erb :"_votes", layout: false, locals: { votable: question }  %>
+    <%= erb :"_votes", layout: false, locals: { votable: @question, votable_type: @question.class, votable_id: @question.id}  %>
   </div>
 
   <div class="questions-full">
-    <%= question.title %><br>
-    <%= question.body %><br>
+    <%= @question.title %><br>
+    <%= @question.body %><br>
     <p class="author">
-      Asked by: <%= question.author.name %>
+      Asked by: <%= @question.author.name %>
     </p>
   </div>
 
   <div class="comments-container">
-    <%= erb :"_comments", layout: false, locals: { commentable: question }  %>
+<!--     = erb :"_comments", layout: false, locals: { commentable: @question } -->
   </div>
 
   <div class="answers-container">
-    <%= p question %>
-    <%= question.answers.each do |answer| %>
+    <% @question.answers.each do |answer| %>
     <div class="votes-container">
-      <%= erb :"_votes", layout: false, locals: { votable: answer }  %>
+      <%= erb :"_votes", layout: false, locals: { votable: answer.to_json, votable_type: answer.class }  %>
     </div>
       <%= answer.body %><br>
       <%= answer.user.name %><br>
 
-      <% erb :"_comments", layout: false, locals: { commentable: answer } %>
+      <!-- = erb :"_comments", layout: false, locals: { commentable: answer }  -->
     <% end %>
   </div>
 

@@ -16,5 +16,7 @@ post '/questions' do
 end
 
 get '/questions/:id' do
-  erb :'/questions/show'
+  @question = Question.find(params[:id])
+
+  erb :'questions/show'
 end
