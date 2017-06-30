@@ -12,7 +12,7 @@
   </div>
 
   <div class="comments-container">
-<!--     = erb :"_comments", layout: false, locals: { commentable: @question } -->
+    <%= erb :"_comments", layout: false, locals: { commentable: @question } %>
   </div>
 
   <div class="answers-container">
@@ -23,7 +23,7 @@
       <%= answer.body %><br>
       <%= answer.user.name %><br>
 
-      <!-- = erb :"_comments", layout: false, locals: { commentable: answer }  -->
+      <%= erb :"_comments", layout: false, locals: { commentable: answer } %>
     <% end %>
   </div>
 

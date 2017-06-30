@@ -1,0 +1,11 @@
+<% commentable.comments.each do |comment| %>
+  <div class="votes-container">
+    <%= erb :"_votes", layout: false, locals: { votable: comment, votable_type: comment.class, votable_id: comment.id}  %>
+  </div>
+  <div class="comments-full">
+    <%= comment.body %>
+    <p class="author">
+      From: <%= comment.commenter.name%>
+    </p>
+  </div>
+<% end %>
