@@ -10,7 +10,12 @@
   <ol class="nav-bar-user-functions-list">
   <% if logged_in? %>
    <li><a href="/questions/new">Ask a Question</a></li>
-   <li><a class="logout" href="/sessions">Logout</a></li>
+   <li>
+     <form action="/sessions" method="post">
+       <input type="hidden" name="_method" value="delete">
+       <input type="submit" class="logout" value="Logout">
+     </form>
+   </li>
   <% else %>
     <li><a href="/sessions/new">Login</a></li>
     <li><a href="/users/new">Sign Up</a></li>
