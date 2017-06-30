@@ -1,6 +1,15 @@
-<span>index.erb</span>
-<!--div class="post-container">
-  <!-- this is the partial to display all the questions and answers -->
-  <!-- = erb :'_questions.erb', layout:false
-div -->
+<section id="sort-questions" >
+  <ul>
+    <!-- where do I go? -->
+    <li><a href="">Most Recent</a></li>
+    <li><a href="">Heighest Voted</a></li>
+    <li><a href="">Trending</a></li>
+  </ul>
+</section>
+<div class="post-container">
+  <!-- this is the partial to display all the questions  -->
+  <% @questions.each  do |question| %>
+  <%= erb :'_questions', layout: false, locals: { question: question } %>
+  <% end %>
+</div>
 
