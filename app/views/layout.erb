@@ -13,5 +13,10 @@
       <%= erb :'_nav_bar', layout: false %>
     </div>
   <%= yield %>
+    <div id="errors">
+      <% if @errors %>
+        <%= erb :'_errors', layout: false%>
+      <% end %>
+    </div>
 </body>
 </html>
