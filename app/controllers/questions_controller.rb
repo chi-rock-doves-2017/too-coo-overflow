@@ -14,3 +14,7 @@ post '/questions' do
     erb :'questions/new'
   end
 end
+
+get '/questions/:id' do
+  erb :'/questions/show'
+end
