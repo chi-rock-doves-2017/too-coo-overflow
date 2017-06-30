@@ -18,7 +18,7 @@
   <div class="answers-container">
     <% @question.answers.each do |answer| %>
     <div class="votes-container">
-      <%= erb :"_votes", layout: false, locals: { votable: answer.to_json, votable_type: answer.class }  %>
+      <%= erb :"_votes", layout: false, locals: { votable: answer, votable_type: answer.class, votable_id: answer.id}  %>
     </div>
       <%= answer.body %><br>
       <%= answer.user.name %><br>
@@ -29,7 +29,8 @@
 
   <% if logged_in? %>
     <div class="answer-form">
-      <form action="POST" method="/answers">
+      <form action="/answers" method="POST">
+        <input type="hidden" name="question_id" value="<%= @question.id %>">
         <input type="textarea" name="answer">
         <input type="submit" value="Submit">
       </form>

@@ -4,11 +4,11 @@ get '/answers/new' do
 end
 
 post '/answers' do
-  new_answer = Answer.new(params[:answer])
+  new_answer = Answer.new(body: params[:answer], question_id: params[:question_id])
   new_answer.user = current_user
   if new_answer.save
     @alerts = ["Thanks for your answer!"]
-    redirect '/questions/show'
+    redirect "/questions/#{params[:question_id]}"
   else
     @errors = new_answer.errors.full_messages
     erb :'/questions/show'
