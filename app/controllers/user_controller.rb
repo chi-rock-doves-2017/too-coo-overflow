@@ -7,7 +7,7 @@ post '/users' do
 		create(params)
 		redirect '/sessions/new'
 	else
-		@errors = ['Passwords do not match, please try again.']
+		@errors = ['Password does not match, please try again.']
 		erb :'users/new'
 	end
 end

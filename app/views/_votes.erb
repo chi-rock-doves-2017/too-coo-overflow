@@ -4,7 +4,7 @@
   <p><%= votable %></p> -->
   <input type="hidden" name="vote" value="1">
   <input type="hidden" name="votable_type" value="<%= votable_type %>">
-  <input type="submit" name="updoot">
+  <input type="submit" name="updoot", class="fa fa-sort-desc vote-button upvote-button">
 </form>
 
 <span id="vote_count"><%= vote_count(votable) %></span>
