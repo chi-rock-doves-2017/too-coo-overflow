@@ -1,8 +1,15 @@
+body {
+  margin-top: 70px;
+  background-color: #F6F6EF;
+  font-family: Verdana;
+  width: 90%;
+  margin: 10px auto;
+}
 
 
 .container {
-
-	margin: auto;
+  margin-top: 100px;
+  margin: auto;
 	box-sizing: border-box;
 	width: 50%;
 	border: 2px dashed gray;
@@ -13,7 +20,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  height: 50px;
+  height: 30px;
   background: bisque;
 
 }
@@ -84,14 +91,7 @@ form#posts input[type='submit'] {
   background-color: #F4712D;
 }
 
-.upvote-button {
-  background-color: transparent;
-  border: none;
-  padding-top: 5px;
-  color: #8C8C8C;
-  vertical-align: sub;
-  padding: 1px 0px 0px 0px;
-}
+
 
 .questions-show-container{
   margin-top: 70px;
@@ -142,9 +142,9 @@ header p a:nth-child(n + 2):before {
 
 article {
   margin: 5px 5px;
-}
+}*/
 
-article a.vote-button {
+a.vote-button {
   color: #8C8C8C;
   text-decoration: none;
   display: inline;
@@ -152,8 +152,7 @@ article a.vote-button {
 }
 
 
-article h2 {
-  display: inline;
+/*  display: inline;
   font-size: 10pt;
 }
 
@@ -204,7 +203,7 @@ article p a.delete {
 article p a.delete:before {
   content: ' delete this post';
 
-}
+}*/
 
 form#posts input[type='text'] {
   width: 200px;
@@ -212,6 +211,13 @@ form#posts input[type='text'] {
   font-size: 10pt;
   height: 17px;
 
+} 
+
+#sort-questions {
+  padding-top: 100px;
+}
+.post-cintainer {
+  margin: 10px;
 }
 
 form#posts input[type='submit'] {
@@ -234,4 +240,3 @@ form#posts input[type='submit'] {
   vertical-align: sub;
   padding: 1px 0px 0px 0px;
 }
-*/
