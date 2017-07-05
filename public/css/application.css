@@ -71,6 +71,9 @@ body {
   margin: 2%;
   padding-left: 15px;
 }
+.author {
+  font-size: 0.8em;
+}
 .author-font {
   font-size: 0.8em;
 }

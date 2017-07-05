@@ -4,6 +4,7 @@ $(document).ready(function() {
 
 });
 
+
 var logOutListener = function () {
   $(".logout").on("click", function (event) {
     event.preventDefault()
