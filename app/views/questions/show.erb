@@ -3,7 +3,7 @@
   <div class="votes-container">
 
   <!--add by saham-->
-  
+
     <%= erb :"_votes", layout: false, locals: { votable: @question, votable_type: @question.class, votable_id: @question.id}  %>
 
   </div>
@@ -18,29 +18,38 @@
 
   <div class="comments-container">
     <%= erb :"_comments", layout: false, locals: { commentable: @question } %>
-    <!-- 7/1 saham -->
-    <a href="">add comments</a>
+    <!-- 7/6 JH -->
+    <form action="/comments/new" method="GET">
+      <input type="hidden" name="commentable_type" value=<%= @question.class %>>
+      <input type="hidden" name="commentable_id" value=<%= @question.id %>>
+      <input type="submit" value="add a comment">
+    </form>
   </div>
 
   <div class="answers-container">
   <!-- saham -->
-  
+
     <% @question.answers.each do |answer| %>
     <div class="votes-container">
       <%= erb :"_votes", layout: false, locals: { votable: answer, votable_type: answer.class, votable_id: answer.id}  %>
     </div>
-    
+
     <div class="answers">
       <table>
-      
+
       <tr><td><%= answer.body %></td></tr>
       <tr class="author-font"><td><%= answer.user.name %></td></tr>
-      
+
       </table>
 
       <%= erb :"_comments", layout: false, locals: { commentable: answer } %>
-      <a href="">add comments</a>
-      </div>
+      <!-- 7/6 JH -->
+      <form action="/comments/new" method="GET">
+        <input type="hidden" name="commentable_type" value=<%= answer.class %>>
+        <input type="hidden" name="commentable_id" value=<%= answer.id %>>
+        <input type="submit" value="add a comment">
+      </form>
+    d</div>
     <% end %>
   </div>
 
