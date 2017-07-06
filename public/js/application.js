@@ -1,3 +1,5 @@
+// Commented Out for Debugging - Routes are not working and need troubleshooting before we can get JS and AJAX working
+
 // $(document).ready(function() {
 //   logOutListener();
 //   voteListener()
