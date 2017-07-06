@@ -1,14 +1,21 @@
 <% commentable.comments.each do |comment| %>
- <div class="comment-container"> 
-	  <div class="votes-container">
-	    <%= erb :"_votes", layout: false, locals: { votable: comment, votable_type: comment.class, votable_id: comment.id}  %>
-	  </div> <!-- votes-container div end -->
+	<div class="comment"> 
+		
+		<div class="votes-container">
+			<%= erb :"_votes", layout: false, locals: { votable: comment, votable_type: comment.class, votable_id: comment.id}  %>
+			</div> <!-- votes-container div end -->
 
-	  <div class="comments-full">
-	    <%= comment.body %>
-	    <p class="author">
-	      From: <%= comment.commenter.name%>
-	    </p>
-	  </div> <!-- comments-full div end -->
-  </div> <!-- comment-container div end -->
+			<%= comment.body %>
+			<p class="author">
+				 From: <%= comment.commenter.name%>
+			</p>
+	</div> <!-- comment div end -->
 <% end %>
+
+<div class="add-comment-container">
+  <form action="/comments/new" method="GET">
+    <input type="hidden" name="commentable_type" value=<%= @question.class %>>
+    <input type="hidden" name="commentable_id" value=<%= @question.id %>>
+    <input type="submit" value="add a comment">
+  </form>
+</div> <!-- add-comment-container div end -->

@@ -196,3 +196,50 @@ input.logout {
   color: white;
 }
 
+
+=========DEBUGGING==========
+.votes-container {
+  border: dotted pink;
+}
+
+.answers-container {
+  border: solid green;
+  margin: 5px;
+  padding: 5px;
+}
+
+.comments-container {
+  border: dotted lightblue;
+}
+
+.question-container {
+  border: dotted purple;
+  margin: 5px;
+  padding: 5px;
+}
+
+.answer {
+  border: solid brown;
+}
+
+.comment {
+  border: dotted cyan;
+}
+
+.answer-submit-container {
+  border: dotted dodgerblue;
+}
+
+.votes-container {
+  border: dotted pink;
+}
+
+.comments-full {
+  border: dotted burlywood;
+}
+
+.add-comment-container {
+  border: dotted gray;
+}
+
+
