@@ -1,7 +1,7 @@
 <nav class="nav-bar-home" >
   <ul id="nav-bar-home-list">
   <!-- this is the logo img -->
-   <!--  <li><img src="assests/logo"></li> -->
+    <img id="logo"src="too-coo-overflow.png">
     <li class="li-inline"><a href="/">Home</a></li>
     <!-- 7/01 Saham move nav to this section -->
     <% if logged_in? %> 
@@ -9,7 +9,7 @@
     <li class="li-inline">
      <form action="/sessions" method="post">
        <input type="hidden" name="_method" value="delete">
-       <input type="submit" class="logout" value="Logout">
+       <a><input type="submit" class="logout" value="Logout"></a>
      </form></li>
     <% else %>
     <li class="li-inline"><a href="/sessions/new">Login</a></li>

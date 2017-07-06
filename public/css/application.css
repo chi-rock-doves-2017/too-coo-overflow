@@ -5,32 +5,13 @@ body {
   width: 90%;
 }
 
-
 .container {
-  margin-top: 100px;
   margin: auto;
 	box-sizing: border-box;
 	width: 50%;
+  overflow: none;
 	border: 2px dashed gray;
 	padding: 25px;
-}
-
-#nav-bar-container {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: bisque;
-
-}
-#nav-bar-home-list {
-  list-style-type: none;
-  padding: 0;
-  background: bisque;
-}
-
-#nav-bar-home-list li {
-  display: inline-block;
-  padding-left: 20px;
 }
 
 .questions-full {
@@ -40,34 +21,18 @@ body {
   padding-left: 15px;
 }
 
-input.logout {
-  background: none;
-  border: none;
-}
-
-li.li-inline a {
-  text-decoration: none;
-}
-
-#sort-questions {
-  padding-top: 100px;
-}
-
 #errors {
   margin: auto;
   box-sizing: border-box;
   width: 30%;
   padding: 10px;
-
 }
 
 .answers-container{
   margin: 2%;
   padding-top: 10px;
   padding-bottom: 10px;
-  /**padding: 10px 10px;*/
   font-size: 1em;
-  
 }
 
 .answers {
@@ -75,9 +40,11 @@ li.li-inline a {
   margin: 2%;
   padding-left: 15px;
 }
+
 .author {
   font-size: 0.8em;
 }
+
 .author-font {
   font-size: 0.8em;
 }
@@ -88,12 +55,12 @@ a.vote-button {
   display: inline;
   vertical-align: sub;
 }
+
 form#posts input[type='text'] {
   width: 200px;
   margin-left: 20px;
   font-size: 10pt;
   height: 17px;
-
 }
 
 form#posts input[type='submit'] {
@@ -104,8 +71,6 @@ form#posts input[type='submit'] {
   background-color: #F4712D;
 }
 
-
-
 .questions-show-container{
   margin-top: 70px;
   padding: 10px 10px 10px 10px;
@@ -115,121 +80,18 @@ form#posts input[type='submit'] {
   float: left;
 }
 
-
-
-
-
-
-/*body {
-  counter-reset:section;
-  background-color: #F6F6EF;
-  font-family: Verdana;
-  max-width: 700px;
-  margin: 0 auto;
+textarea {
+    width: 100%;
 }
-
-header {
-  background-color: #F4712D;
-  padding: 5px 5px;
-}
-
-header h1 {
-  font-size: 11pt;
-  display: inline;
-}
-
-header p {
-  margin-left: 5px ;
-  font-size: 10pt;
-  display: inline;
-}
-
-header p a {
-  color: black;
-  text-decoration: none;
-}
-
-header p a:nth-child(n + 2):before {
-  content: " | ";
-}
-
-article {
-  margin: 5px 5px;
-}*/
-
-a.vote-button {
-  color: #8C8C8C;
-  text-decoration: none;
-  display: inline;
-  vertical-align: sub;
-}
-
-
-/*  display: inline;
-  font-size: 10pt;
-}
-
-article:before {
-  counter-increment: section;
-  color: #8C8C8C;
-  font-size: 10pt;
-  content: counter(section) ". ";
-}
-
-article h2 a {
-  text-decoration: none;
-  color: black;
-}
-
-article p {
-  color: #8C8C8C;
-  font-size: 7pt;
-  margin: 3px 30px;
-}
-
-article p span.points:after {
-  content: " points";
-}
-
-article p span.username:before {
-  content: " by ";
-}
-
-article p span.timestamp:after {
-  content: ' hours ago';
-}
-
-article p span.comment-count:before {
-  content: ' | ';
-}
-
-article p span.comment-count:after {
-  content: ' comments | ';
-}
-
-article p a.delete {
-  text-decoration: none;
-  color: #8C8C8C;
-  text-decoration: none;
-}
-
-article p a.delete:before {
-  content: ' delete this post';
-
-}*/
 
 form#posts input[type='text'] {
   width: 200px;
   margin-left: 20px;
   font-size: 10pt;
   height: 17px;
-
 } 
 
-#sort-questions {
-  padding-top: 100px;
-}
-.post-cintainer {
+.post-container {
   margin: 10px;
 }
 
@@ -241,9 +103,9 @@ form#posts input[type='submit'] {
   background-color: #F4712D;
 }
 
-.inline {
-  display: inline;
-}
+/*.inline {
+  display: inline-block;
+}*/
 
 .upvote-button {
   background-color: transparent;
@@ -253,3 +115,51 @@ form#posts input[type='submit'] {
   vertical-align: sub;
   padding: 1px 0px 0px 0px;
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li a {
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #7ffa52;
+  font-family: 'Fredoka One', cursive;
+  font-size: 22px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+li {
+  display: inline-block;
+}
+
+li a:hover {
+  background-color: #52d8fa;
+}
+
+input.logout {
+  background: none;
+  border: none;
+  text-decoration: none;
+  padding: 0;
+  margin-right: 15px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#logo {
+  height: 10%;
+  width: 10%;
+  display: inline-block;
+}
+
+#nav-bar-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #ffff54;
+}
+
