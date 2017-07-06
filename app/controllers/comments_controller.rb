@@ -1,14 +1,20 @@
 get '/comments/new' do
-  redirect '/' unless logged_in?
-  erb :'/_comments'
+  if logged_in?
+    @commentable_type = params[:commentable_type]
+    @commentable_id = params[:commentable_id]
+    erb :'comments/new'
+  else
+    @errors = ["You are not logged in to vote!"]
+    erb :'sessions/new'
+  end
 end
 
 post '/comments' do
-  @comments = Comment.new(body: params[:body], commentable_id: params[:commentable_id], commentable_type: params[:commentable_type], commenter_id: params[:commenter_id])
-  if @comments.save
-    @alerts = "Thanks for your comment!"
+  @comment = Comment.new(params[:comment])
+  if @comment.save
+    redirect "/questions/#{session[:question_id]}"
   else
-    @errors = @comments.errors.full_messages
-    erb :'/questions/show'
+    @errors = ["Comments cannot be blank, Please write something"]
+    erb :'comments/new'
   end
 end
