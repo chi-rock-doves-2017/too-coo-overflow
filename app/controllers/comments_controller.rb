@@ -1,7 +1,11 @@
 get '/comments/new' do
-  @commentable_type = params[:commentable_type]
-  @commentable_id = params[:commentable_id]
-  erb :'comments/new'
+  if logged_in?
+    @commentable_type = params[:commentable_type]
+    @commentable_id = params[:commentable_id]
+    erb :'comments/new'
+  else
+    redirect back
+  end
 end
 
 post '/comments' do
@@ -12,5 +16,4 @@ post '/comments' do
     @errors = ["Comments cannot be blank, Please write something"]
     erb :'comments/new'
   end
-
 end
