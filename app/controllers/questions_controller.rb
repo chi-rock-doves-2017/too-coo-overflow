@@ -17,5 +17,6 @@ end
 
 get '/questions/:id' do
   @question = Question.find(params[:id])
+  session[:question_id] = @question.id
   erb :'questions/show'
 end
