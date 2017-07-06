@@ -1,8 +1,31 @@
 body {
   margin-top: 100px;
   background-color: #F6F6EF;
-  font-family: Verdana;
+  font-family: 'Raleway', sans-serif;
   width: 90%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+ 
+}
+
+a {
+  text-decoration: none;
+  color: #52d8fa;
+  font-weight: bold;
+}
+
+input {
+  background: none;
+  border: none;
+  text-decoration: none;
 }
 
 .container {
@@ -81,7 +104,7 @@ form#posts input[type='submit'] {
 }
 
 textarea {
-    width: 100%;
+  width: 100%;
 }
 
 form#posts input[type='text'] {
@@ -103,10 +126,6 @@ form#posts input[type='submit'] {
   background-color: #F4712D;
 }
 
-/*.inline {
-  display: inline-block;
-}*/
-
 .upvote-button {
   background-color: transparent;
   border: none;
@@ -116,29 +135,32 @@ form#posts input[type='submit'] {
   padding: 1px 0px 0px 0px;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-li a {
+#nav-bar-home-list li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   color: #7ffa52;
   font-family: 'Fredoka One', cursive;
-  font-size: 22px;
+  font-size: 30px;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-li {
+#sort-questions li a {
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #7ffa52;
+  font-family: 'Fredoka One', cursive;
+  font-size: 16px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#sort-questions li {
   display: inline-block;
 }
 
-li a:hover {
-  background-color: #52d8fa;
+#sort-questions li a:hover {
+  color: white;
 }
 
 input.logout {
@@ -154,12 +176,23 @@ input.logout {
   height: 10%;
   width: 10%;
   display: inline-block;
+  float: left;
 }
 
 #nav-bar-container {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #ffff54;
+  height: 90px;
+  background: #ffea82;
+}
+
+#nav-bar-home-list li{
+  float: left;
+  padding-top: 3%;
+}
+
+#nav-bar-home-list li a:hover {
+  color: white;
 }
 

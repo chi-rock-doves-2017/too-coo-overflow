@@ -36,22 +36,23 @@
 
     <div class="answers">
       <table>
-
       <tr><td><%= answer.body %></td></tr>
       <tr class="author-font"><td><%= answer.user.name %></td></tr>
-
       </table>
 
-      <%= erb :"_comments", layout: false, locals: { commentable: answer } %>
-      <!-- 7/6 JH -->
-      <form action="/comments/new" method="GET">
-        <input type="hidden" name="commentable_type" value=<%= answer.class %>>
-        <input type="hidden" name="commentable_id" value=<%= answer.id %>>
-        <input type="submit" value="add a comment">
-      </form>
-    d</div>
+      <div class="comments-container">
+        <%= erb :"_comments", layout: false, locals: { commentable: answer } %>
+        <!-- 7/6 JH -->
+        <form action="/comments/new" method="GET">
+          <input type="hidden" name="commentable_type" value=<%= answer.class %>>
+          <input type="hidden" name="commentable_id" value=<%= answer.id %>>
+          <input type="submit" value="add a comment">
+        </form>
+      </div> <!-- comments-container div end -->
+
+    </div> <!-- answers div end -->
     <% end %>
-  </div>
+  </div> <!-- answers-container div end -->
 
   <% if logged_in? %>
     <div class="answer-form">
@@ -60,6 +61,6 @@
         <input type="textarea" name="answer" value="answer">
         <input type="submit" value="Submit">
       </form>
-    </div>
+    </div> <!-- answer-form div end -->
   <% end %>
-</div>
+</div> <!-- answers-container div end -->
