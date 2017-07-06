@@ -14,3 +14,9 @@ post '/answers' do
     erb :'/questions/show'
   end
 end
+
+get '/answers/:id' do
+  @answer = Answer.find(params[:id])
+  
+  erb :'/answers/show'
+end
