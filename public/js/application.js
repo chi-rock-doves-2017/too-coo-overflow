@@ -56,8 +56,10 @@
 //       console.log(vote);
 //       debugger;
 //       $(that).find(".upvote-button").css("color", "red");
+//       redirect back;
       
 //       // $(that).find("#vote_count").text('vote_count(votable)')
+
 //       debugger;
 
 //       /** need to update 7/2 saham */

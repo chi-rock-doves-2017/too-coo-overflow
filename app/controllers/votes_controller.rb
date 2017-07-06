@@ -10,10 +10,12 @@ post '/votes' do
 	    if request.xhr?
 	      content_type:json
 	      {vote_count: vote}.to_json
+	      # erb :"_votes", layout: false, locals: {votable: params[:votable], votable_type: vote.votable_type, votable_id: vote.votable_id }
 	    end
 	  #Matt redirect fix on 7/6/17, not proud but it works
+	  #Saham I changed to question_di to id. It was not working previously
 	    if vote.votable_type != "Question"
-	    	redirect "/questions/#{vote.votable.question_id}"
+	    	redirect "/questions/#{vote.votable.id}"
 	    else
 	    	redirect "/questions/#{vote.votable.id}"
 	    end
