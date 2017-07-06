@@ -223,7 +223,7 @@ input.logout {
 }
 
 .comment {
-  border: dotted cyan;
+  border: solid blueviolet;
 }
 
 .answer-submit-container {
