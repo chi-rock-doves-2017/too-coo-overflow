@@ -1,0 +1,19 @@
+<div class="answers">
+
+    <div class="votes-container">
+      <%= erb :"_votes", layout: false, locals: { votable: @answer, votable_type: @answer.class, votable_id: @answer.id}  %>
+    </div>
+    
+    <div class="answers">
+      <table>
+      
+      <tr><td><%= @answer.body %></td></tr>
+      <tr class="author-font"><td><%= @answer.user.name %></td></tr>
+      
+      </table>
+
+      <%= erb :"_comments", layout: false, locals: { commentable: @answer } %>
+      <a href="">add comments</a>
+      </div>
+
+</div>
