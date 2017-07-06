@@ -4,7 +4,8 @@ get '/comments/new' do
     @commentable_id = params[:commentable_id]
     erb :'comments/new'
   else
-    redirect back
+    @errors = ["You are not logged in to vote!"]
+    erb :'sessions/new'
   end
 end
 
