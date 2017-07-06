@@ -1,9 +1,8 @@
 body {
-  margin-top: 70px;
+  margin-top: 100px;
   background-color: #F6F6EF;
   font-family: Verdana;
   width: 90%;
-  margin: 10px auto;
 }
 
 
@@ -20,19 +19,17 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 30px;
   background: bisque;
 
 }
 #nav-bar-home-list {
   list-style-type: none;
-  margin: 0;
   padding: 0;
   background: bisque;
 }
 
 #nav-bar-home-list li {
-  display: inline;
+  display: inline-block;
   padding-left: 20px;
 }
 
@@ -43,7 +40,14 @@ body {
   padding-left: 15px;
 }
 
+input.logout {
+  background: none;
+  border: none;
+}
 
+li.li-inline a {
+  text-decoration: none;
+}
 
 #sort-questions {
   padding-top: 100px;
