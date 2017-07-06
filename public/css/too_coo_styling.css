@@ -418,36 +418,3 @@ td,
 th {
   padding: 0;
 }
-.nav-bar-home {
-  float: left;
-}
-
-.nav-bar-home-list {
-  list-style-type: none;
-}
-
-.nav-bar-user-functions {
-    float: right;
-    display: inline;
-}
-
-.nav-bar-user-functions-list {
-    list-style-type: none;
-    display: inline;
-}
-
-
-#nav-bar-container {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100px;
-
-}
-
-body {
-  margin: auto;
-  position: relative;
-  width: 100%;
-  margin-top: 100px;
-}

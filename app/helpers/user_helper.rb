@@ -10,6 +10,7 @@ helpers do
 	def create(params)
 		@user = User.new(params[:user])
 		@user.password = params[:password]
-		@user.save!
+		# 7/5 by saham. took the ! off 
+		@user.save
 	end
 end

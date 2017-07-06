@@ -1,24 +1,22 @@
-<nav class="nav-bar-home">
-  <ol class="nav-bar-home-list">
+<nav class="nav-bar-home" >
+  <ul id="nav-bar-home-list">
   <!-- this is the logo img -->
    <!--  <li><img src="assests/logo"></li> -->
-    <li><a href="/">Home</a></li>
-  </ol>
-</nav>
-
-<nav class="nav-bar-user-functions">
-  <ol class="nav-bar-user-functions-list">
-  <% if logged_in? %>
-   <li><a href="/questions/new">Ask a Question</a></li>
-   <li>
+    <li class="li-inline"><a href="/">Home</a></li>
+    <!-- 7/01 Saham move nav to this section -->
+    <% if logged_in? %> 
+    <li class="li-inline"><a href="/questions/new">Ask a Question</a></li>
+    <li class="li-inline">
      <form action="/sessions" method="post">
        <input type="hidden" name="_method" value="delete">
        <input type="submit" class="logout" value="Logout">
-     </form>
-   </li>
-  <% else %>
-    <li><a href="/sessions/new">Login</a></li>
-    <li><a href="/users/new">Sign Up</a></li>
-  <% end %>
-  </ol>
+     </form></li>
+    <% else %>
+    <li class="li-inline"><a href="/sessions/new">Login</a></li>
+    <li class="li-inline"><a href="/users/new">Sign Up</a></li>
+   <% end %>
+  <!--7/1 added by Saham -->
+  </ul>
 </nav>
+
+ 

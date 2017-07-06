@@ -1,6 +1,6 @@
 class User < ApplicationRecord
 	validates :name, presence: true
-	validates :email, presence: true
+	validates :email, presence: true, uniqueness: true
 	validates :password_hash, presence: true
 
 	has_many :questions, foreign_key: :author_id
