@@ -1,5 +1,6 @@
 $(document).ready(function() {
   logOutListener();
+  voteListener()
   
 
 });
@@ -22,28 +23,43 @@ var logOutListener = function () {
   })
 };
 
-var votelistener = function () {
+var voteListener = function () {
   
   $(".upvote").submit(function(event){
     console.log("iam here"); 
+    console.log(this);
+
 
     event.preventDefault();
-    votable_type = $("input[name=votable_type]");
-    vote = $("input[name=vote]");
-    votable_id = $("input[name=votable_id]")
-    console.log(votable_type.val());
-    console.log(vote.val());
-    console.log(votable_id.val());
-    debugger
+    debugger;
+    votable_type = $("input[name=votable_type]").val();
+    vote = $("input[name=vote]").val();
+    votable_id = $("input[name=votable_id]").val();
+    votable = $("input[name=votable").val();
+    var post_url = $(this).attr("action");
+
+    console.log(votable_type);
+    console.log(vote);
+    console.log(votable_id);
+    var that = this;
     $.ajax({
       url: "/votes",
       method: "POST",
-      data: { vote: vote.val(), votable_type: votable_type.val(), votable_id: votable_id.val()}
+      dataType: "Json",
+      data: { vote: vote, votable_type: votable_type, votable_id: votable_id, votable}
     })
-    .done(function(vote_count) {
-      $('.vote_container').html("where am i now")
+  
+    .done(function(vote) {
+      console.log("I am here inside done");
+      console.log(vote);
+      debugger;
+      $(that).find(".upvote-button").css("color", "red");
+      
+      // $(that).find("#vote_count").text('vote_count(votable)')
+      debugger;
+
       /** need to update 7/2 saham */
       /**location.reload(true)*/
     })
    }) 
-}
+};

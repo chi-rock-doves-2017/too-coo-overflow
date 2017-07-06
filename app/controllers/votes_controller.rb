@@ -5,15 +5,28 @@ post '/votes' do
 	  vote.votable_id = params[:votable_id]
 	  vote.votable_type = params[:votable_type]
 	  if vote.save
-	    redirect back
-	    #if request.xhr?
-	    	# p "#{params[:id]}"
-	    	# p "where am i"
-	     #  p "#{session}"
-	     #  p "#{params[:votable_type]}"
+	  	
+	    if request.xhr?
+	    	
+	    	 
+	    	p "again I am here request.xhr"
+	      
+	       p "#{params[:votable_type]}"
+	       p "#{vote}"
+	       p "#{params}"
+	       p "#{params[:votable]}"
+	       
+	    # total_vote = vote_count(params[:votable])
+	    # p total_vote
+	       
+	       content_type:json
+	       {vote_count: vote}.to_json
+	       
+	    #  #else
+	     	#redirect back
+	     end
 
-	    	#erb :_votes, layout: false, locals: { votable: @question, votable_type: @question.class, votable_id: @question.id}
-	    #end
+	    	
 	  else
 	    @errors = ["Your doot didn't poot, sorry!"]
 	    erb :index
