@@ -23,7 +23,7 @@
 
 <!-- ANSWERS -->
 
-<div class="answers-container">
+
 
 	<% @question.answers.each do |answer| %>
 	<!-- one answer -->
@@ -31,16 +31,19 @@
 			<div class="votes-container">
 				<%= erb :"_votes", layout: false, locals: { votable: answer, votable_type: answer.class, votable_id: answer.id}  %>
 			</div> <!-- votes-container end --> 
-
+			<p class="answer-body">
 			<%= answer.body %><br>
-			<%= answer.user.name %><br>
+			<span class="author">
+				Posted by: <%= answer.user.name %><br>
+				</span>
+			</p>
 		</div> <!-- answer end -->
 
 	<div class="comments-container">
 		<%= erb :"_comments", layout: false, locals: { commentable: answer } %>
 	</div> <!-- comments-container end -->
 	<% end %>
-</div> <!-- answers-container end -->
+
 
 
 
