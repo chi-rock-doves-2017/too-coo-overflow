@@ -1,5 +1,6 @@
 post '/votes' do
 	if logged_in?
+		p "#{@question}"
 	  vote = Vote.new(value: params[:vote].to_i, voter_id: current_user.id)
 	  vote.votable_id = params[:votable_id]
 	  vote.votable_type = params[:votable_type]
