@@ -39,6 +39,7 @@ var voteListener = function () {
     votable_id = $("input[name=votable_id]").val();
     votable = $("input[name=votable").val();
     var post_url = $(this).attr("action");
+    var votable_type = $(this).closest("form").children("input[name=votable_type]").val();
     var post_data = $(this).serialize();
     debugger;
 
@@ -51,7 +52,9 @@ var voteListener = function () {
     $.ajax({
       url: "/votes",
       method: "POST",
-      data: { vote: vote, votable_type: votable_type, votable_id: votable_id}
+      //data: { vote: vote, votable_type: votable_type, votable_id: votable_id}
+      data: post_data
+
     })
   
     .done(function(response) {
@@ -61,9 +64,16 @@ var voteListener = function () {
       var response = $(response);
 
       var vote_counted = response[15].firstElementChild.children[1].innerHTML;
+      var question_comment_vote_count = response[15].children[2].firstElementChild.children[1].innerHTML;
       $(that).find(".upvote-button").css("color", "red");
       //       
-      $(that).parents('.votes-container').children('#vote_count').text(vote_counted);
+      if (votable_type === 'Question') {
+        $(that).parents('.votes-container').children('#vote_count').text(vote_counted);
+      } 
+      else if (votable_type === 'Comment') {
+        $(that).parents().closest(".comments-container").children(".votes-container").children("#vote_count").text(question_comment_vote_count);
+      }
+
 
       debugger;
 
