@@ -111,9 +111,23 @@ form#posts input[type='submit'] {
   float: left;
 }
 
+.comment-container{
+  margin: 2%;
+  padding-top: 70px;
+  padding-bottom: 10px;
+  /**padding: 10px 10px;*/
+  font-size: 1em;
+  
+}
 
-
-
+.ask-container{
+  margin: 2%;
+  padding-top: 70px;
+  padding-bottom: 10px;
+  /**padding: 10px 10px;*/
+  font-size: 1em;
+  
+}
 
 
 /*body {

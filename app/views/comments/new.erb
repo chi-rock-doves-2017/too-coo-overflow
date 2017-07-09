@@ -1,3 +1,4 @@
+<div class="comment-container">
 <textarea form="new_comment" name="comment[body]" placeholder="Add your comments here..."></textarea>
 
 <form id="new_comment" action="/comments" method="POST">
@@ -6,3 +7,5 @@
   <input type="hidden" name="comment[commenter_id]" value=<%= current_user.id %>>
   <input type="submit" value="Add Comment" >
 </form>
+
+</div>

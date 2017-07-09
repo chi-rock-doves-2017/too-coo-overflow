@@ -41,7 +41,7 @@ var voteListener = function () {
     var post_url = $(this).attr("action");
     var votable_type = $(this).closest("form").children("input[name=votable_type]").val();
     var post_data = $(this).serialize();
-    debugger;
+    // debugger;
 
     console.log(votable_type);
     console.log(vote);
@@ -60,7 +60,7 @@ var voteListener = function () {
     .done(function(response) {
       console.log("I am here inside done");
       console.log(response);
-      debugger;
+      // debugger;
       var response = $(response);
 
       var vote_counted = response[15].firstElementChild.children[1].innerHTML;
@@ -79,7 +79,7 @@ var voteListener = function () {
       }
 
 
-      debugger;
+      // debugger;
 
       /** need to update 7/2 saham */
       /**location.reload(true)*/
