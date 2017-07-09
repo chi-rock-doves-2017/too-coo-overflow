@@ -1,7 +1,7 @@
 <div class="container">
 
 	<form id="new_comment" action="/comments" method="POST">
-	    <input type="hidden" name="question_id" value="<%= @question.id %>">
+	    <input type="hidden" name="question_id" value="<%= @commentable_id %>">
 	    <input type="textarea" name="comment[body]" value="Add your comment here...">
 	    <input type="hidden" name="comment[commentable_type]" value=<%= @commentable_type %>>
 		<input type="hidden" name="comment[commentable_id]" value=<%= @commentable_id %>>

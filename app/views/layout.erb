@@ -15,11 +15,14 @@
     <div id="nav-bar-container">
       <%= erb :'_nav_bar', layout: false %>
     </div>
-  <%= yield %>
+  <div id="content">
+    <%= yield %>
+    
     <div id="errors">
       <% if @errors %>
         <span class="error-box"><%= erb :'_errors', layout: false%></span>
       <% end %>
     </div>
+  </div>
 </body>
 </html>

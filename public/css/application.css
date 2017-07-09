@@ -1,7 +1,7 @@
 /*Basic Document Styling*/
 
 body {
-  margin-top: 100px;
+  /*margin-top: 100px;*/
   background-color: #F6F6EF;
   font-family: 'Raleway', sans-serif;
   width: 90%;
@@ -33,7 +33,10 @@ input {
   float: left;
 }
 
-
+#content {
+  padding: 50px 0 0 50px;
+  margin-top: 100px;
+}
 .container {
   margin: auto;
 	box-sizing: border-box;
