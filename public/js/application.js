@@ -73,6 +73,10 @@ var voteListener = function () {
       else if (votable_type === 'Comment') {
         $(that).parents().closest(".comments-container").children(".votes-container").children("#vote_count").text(question_comment_vote_count);
       }
+      else if (votable_type === 'Answer') {
+        $(that).parents().closest(".answer-container").children(".votes-container").children("#vote_count").text(question_comment_vote_count);
+
+      }
 
 
       debugger;
