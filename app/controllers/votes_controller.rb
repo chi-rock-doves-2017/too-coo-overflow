@@ -8,7 +8,23 @@ post '/votes' do
 	      content_type:json
 	      {vote_count: vote}.to_json
 	    end
-	    redirect back
+# <<<<<<< rachel-css
+	  #Matt redirect fix on 7/6/17, not proud but it works
+	    if vote.votable_type == "Question"
+	    	redirect "/questions/#{vote.votable.id}"
+	    elsif vote.votable_type == "Answer"
+	    	redirect "/questions/#{vote.votable.question_id}"
+	    elsif vote.votable_type == "Comment"
+	    	if vote.votable.commentable_type == "Answer"
+	    		redirect "/questions/#{vote.votable.commentable.question_id}"
+	    	elsif vote.votable.commentable_type == "Question"
+	    		redirect "/questions/#{vote.votable.commentable.id}"
+	    	end
+	    end
+	  #end of Matt fix
+# =======
+# 	    redirect back
+# >>>>>>> master
 	  else
 	    @errors = ["Your doot didn't poot, sorry!"]
 	    erb :index
