@@ -1,7 +1,7 @@
 /*Basic Document Styling*/
 
 body {
-  /*margin-top: 100px;*/
+  margin-top: 70px;
   background-color: #F6F6EF;
   font-family: 'Raleway', sans-serif;
   width: 90%;
@@ -12,6 +12,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
+
 }
 
 a {
@@ -19,6 +20,7 @@ a {
   color: #52d8fa;
   font-weight: bold;
 }
+
 
 input {
   background: none;
@@ -37,6 +39,7 @@ input {
   padding: 50px 0 0 50px;
   margin-top: 100px;
 }
+
 
 .container {
   margin: auto;
@@ -128,6 +131,26 @@ form#posts input[type='text'] {
   padding-top: 3%;
 }
 
+
+.comment-container{
+  margin: 2%;
+  padding-top: 70px;
+  padding-bottom: 10px;
+  /**padding: 10px 10px;*/
+  font-size: 1em;
+  
+}
+
+.ask-container{
+  margin: 2%;
+  padding-top: 70px;
+  padding-bottom: 10px;
+  /**padding: 10px 10px;*/
+  font-size: 1em;
+  
+}
+
+
 #nav-bar-home-list li a:hover {
   color: white;
 }
@@ -144,14 +167,6 @@ input.logout {
 input.logout:hover {
   background: none;
 }
-
-
-
-
-
-
-
-
 
 /*Questions Styling*/
 
@@ -224,6 +239,7 @@ input.logout:hover {
 .answer-body {
   float: left;
 }
+
 
 
 /*Comments Styling*/
