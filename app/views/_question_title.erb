@@ -1,11 +1,13 @@
 <div class="questions-container">
   <div class="votes-container">
-<!--     VOTES GO HERE    -->
+		
   </div>
   <div class="questions-body">
     <a href="/questions/<%= question.id %>"><%= question.title %></a><br>
     <%= question.answers.count %> answers
-    Asked by: <%= question.author.name %><br>
+    <span class="author">
+    	Asked by: <%= question.author.name %><br>
+    </span>
   </div>
 </div>
 

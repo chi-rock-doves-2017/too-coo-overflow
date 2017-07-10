@@ -1,0 +1,74 @@
+<div class="questions-show-container">
+<!-- 7/1 add font change and name change -->
+  
+  <div class="question-container">
+
+    <div class="votes-container">
+    <!--add by saham-->
+      <%= erb :"_votes", layout: false, locals: { votable: @question, votable_type: @question.class, votable_id: @question.id}  %>
+    </div> <!-- votes-container div end -->
+
+    <%= @question.title %><br>
+    <%= @question.body %><br>
+    <p class="author">
+      Asked by: <%= @question.author.name %>
+    </p>
+  </div> <!-- question-container div end -->
+
+  <div class="comments-container">
+    
+    <% erb :"_comments", layout: false, locals: { commentable: @question } %>
+
+    <!-- 7/6 JH -->
+    <div class="add-comment-container">
+      <form action="/comments/new" method="GET">
+        <input type="hidden" name="commentable_type" value=<%= @question.class %>>
+        <input type="hidden" name="commentable_id" value=<%= @question.id %>>
+        <input type="submit" value="add a comment">
+      </form>
+    </div> <!-- add-comment-container div end -->
+
+  </div> <!-- comments-container div end -->
+
+
+  <div class="answers-container">
+  <!-- saham -->
+
+    <% @question.answers.each do |answer| %>
+      <div class="votes-container">
+        
+        <%= erb :"_votes", layout: false, locals: { votable: answer, votable_type: answer.class, votable_id: answer.id}  %>
+      
+      </div>
+
+      <div class="answers">
+        <table>
+        <tr><td><%= answer.body %></td></tr>
+        <tr class="author-font"><td><%= answer.user.name %></td></tr>
+        </table>
+
+        <div class="comments-container">
+          <%= erb :"_comments", layout: false, locals: { commentable: answer } %>
+          <!-- 7/6 JH -->
+          <form action="/comments/new" method="GET">
+            <input type="hidden" name="commentable_type" value=<%= answer.class %>>
+            <input type="hidden" name="commentable_id" value=<%= answer.id %>>
+            <input type="submit" value="add a comment">
+          </form>
+        </div> <!-- comments-container div end -->
+
+      </div> <!-- answers div end -->
+    <% end %>
+
+  </div> <!-- answers-container div end -->
+
+  <% if logged_in? %>
+    <div class="answer-form">
+      <form action="/answers" method="POST">
+        <input type="hidden" name="question_id" value="<%= @question.id %>">
+        <input type="textarea" name="answer" value="answer">
+        <input type="submit" value="Submit">
+      </form>
+    </div> <!-- answer-form div end -->
+  <% end %>
+</div> <!-- answers-container div end -->

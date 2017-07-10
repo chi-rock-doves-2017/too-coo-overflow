@@ -1,8 +1,10 @@
 <div class="container">
   <form id="ask_question_form" action="/questions" method="POST">
-    <input type="text" name="question[title]" placeholder="Title">
+    <input type="text" name="question[title]" placeholder="Title"><br>
+    <br>
+    <textarea rows="4" cols="50" name="question[body]" form="ask_question_form" placeholder="Ask away..."></textarea>
     <input type="submit" value="Ask!">
   </form>
 
-  <textarea rows="4" cols="50" name="question[body]" form="ask_question_form" placeholder="Ask away..."></textarea>
+  
 </div>
