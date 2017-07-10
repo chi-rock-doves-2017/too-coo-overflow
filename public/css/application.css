@@ -27,8 +27,8 @@ input {
 }
 
 #logo {
-  height: 10%;
-  width: 10%;
+  height: 100px;
+  width: 100px;
   display: inline-block;
   float: left;
 }
