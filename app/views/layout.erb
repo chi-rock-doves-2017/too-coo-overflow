@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/too_coo_styling.css">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Raleway" rel="stylesheet">
   <link rel="stylesheet" href="/css/application.css">
   
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -14,11 +15,14 @@
     <div id="nav-bar-container">
       <%= erb :'_nav_bar', layout: false %>
     </div>
-  <%= yield %>
+  <div id="content">
+    <%= yield %>
+    
     <div id="errors">
       <% if @errors %>
         <span class="error-box"><%= erb :'_errors', layout: false%></span>
       <% end %>
     </div>
+  </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
   logOutListener();
-  voteListener()
+  // voteListener()
   
 
 });
